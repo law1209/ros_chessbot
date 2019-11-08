@@ -1,0 +1,215 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+    Version="10.0"
+    VendorName="SlickEdit"
+    TemplateName="Python - Empty Project"
+    WorkingDir=".">
+    <CustomFolders>
+        <Folder
+            Name="Source Files"
+            Filters="*.py"
+            GUID="{E173AD23-3FC8-4E05-94F5-D33BBF0D3266}"></Folder>
+        <Folder
+            Name="Other Files"
+            Filters=""
+            GUID="{85FB546D-E31F-484D-95F2-F1470333C8A2}"></Folder>
+    </CustomFolders>
+    <Config
+        Name="Debug"
+        DebugCallbackName="pydbgp"
+        Type="python"
+        OutputFile=""
+        AppType="python"
+        CompilerConfigName="">
+        <Menu>
+            <Target
+                Name="Execute"
+                MenuCaption="E&amp;xecute"
+                Dialog="_python_options_form Run"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw"
+                Deletable="0">
+                <Exec CmdLine='"%(SLICKEDIT_PYTHON_EXE)" %(SLICKEDIT_PYTHON_EXECUTE_ARGS) "%f" %~other'/>
+            </Target>
+            <Target
+                Name="Debug"
+                MenuCaption="&amp;Debug"
+                Dialog="_python_options_form Debug"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveNone"
+                RunFromDir="%rw"
+                Deletable="0">
+                <Exec
+                    CmdLine="python_debug"
+                    Type="Slick-C"/>
+            </Target>
+            <Target
+                Name="Python Options"
+                MenuCaption="Python &amp;Options"
+                ShowOnMenu="HideIfNoCmdLine"
+                Deletable="0">
+                <Exec
+                    CmdLine="pythonoptions"
+                    Type="Slick-C"/>
+            </Target>
+        </Menu>
+        <List Name="Python Options">
+            <Item
+                Name="DefaultFile"
+                Value=""/>
+        </List>
+        <List Name="pydbgp Options">
+            <Item
+                Name="ServerHost"
+                Value="127.0.0.1"/>
+            <Item
+                Name="ServerPort"
+                Value="0"/>
+            <Item
+                Name="ListenInBackground"
+                Value="1"/>
+            <Item
+                Name="show_hidden"
+                Value="0"/>
+        </List>
+    </Config>
+    <Files AutoFolders="DirectoryView">
+        <Folder Name="src">
+            <Folder Name="chessbot">
+                <F N="src/chessbot/chess_piece.sdf"/>
+                <F N="src/chessbot/chessboard.sdf"/>
+                <F N="src/chessbot/CMakeLists.txt"/>
+                <F N="src/chessbot/morgan_defeated.pgn"/>
+                <F N="src/chessbot/morgan_defeated_lan.pgn"/>
+                <F N="src/chessbot/package.xml"/>
+                <F N="src/chessbot/r2_chess_pgn.py"/>
+                <F N="src/chessbot/r2_chessboard_cli.py"/>
+                <F N="src/chessbot/r2_cli.py"/>
+                <F N="src/chessbot/r2_hand.py"/>
+                <F N="src/chessbot/r2_mime.py"/>
+                <F N="src/chessbot/spawn_chessboard.py"/>
+            </Folder>
+            <Folder Name="deprecated_nasa_r2_common">
+                <Folder Name="nasa_r2_common">
+                    <F N="src/deprecated_nasa_r2_common/nasa_r2_common/CMakeLists.txt"/>
+                </Folder>
+                <Folder Name="nasa_r2_common_msgs">
+                    <Folder Name="include">
+                        <Folder Name="nasa_r2_common_msgs">
+                            <F N="src/deprecated_nasa_r2_common/nasa_r2_common_msgs/include/nasa_r2_common_msgs/RosMsgPrinter.h"/>
+                        </Folder>
+                    </Folder>
+                    <F N="src/deprecated_nasa_r2_common/nasa_r2_common_msgs/CMakeLists.txt"/>
+                </Folder>
+                <Folder Name="r2_control">
+                    <Folder Name="nodes">
+                        <F N="src/deprecated_nasa_r2_common/r2_control/nodes/r2_fullbody_ready_pose.py"/>
+                        <F N="src/deprecated_nasa_r2_common/r2_control/nodes/r2_ready_pose.py"/>
+                        <F N="src/deprecated_nasa_r2_common/r2_control/nodes/r2_ready_pose_high.py"/>
+                    </Folder>
+                    <F N="src/deprecated_nasa_r2_common/r2_control/CMakeLists.txt"/>
+                </Folder>
+                <Folder Name="r2_description">
+                    <Folder Name="meshes">
+                        <F N="src/deprecated_nasa_r2_common/r2_description/meshes/Transforms.txt"/>
+                    </Folder>
+                    <F N="src/deprecated_nasa_r2_common/r2_description/CMakeLists.txt"/>
+                    <F N="src/deprecated_nasa_r2_common/r2_description/generateXml.sh"/>
+                </Folder>
+                <Folder Name="r2_fullbody_moveit_config">
+                    <F N="src/deprecated_nasa_r2_common/r2_fullbody_moveit_config/CMakeLists.txt"/>
+                </Folder>
+                <Folder Name="r2_moveit_config">
+                    <F N="src/deprecated_nasa_r2_common/r2_moveit_config/CMakeLists.txt"/>
+                </Folder>
+            </Folder>
+            <Folder Name="deprecated_nasa_r2_simulator">
+                <Folder Name="gazebo_gripper">
+                    <Folder Name="include">
+                        <Folder Name="gazebo_gripper">
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_gripper/include/gazebo_gripper/GazeboGripper.h"/>
+                        </Folder>
+                    </Folder>
+                    <Folder Name="src">
+                        <Folder Name="gazebo_gripper">
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_gripper/src/gazebo_gripper/GazeboGripper.cpp"/>
+                        </Folder>
+                    </Folder>
+                    <F N="src/deprecated_nasa_r2_simulator/gazebo_gripper/CMakeLists.txt"/>
+                </Folder>
+                <Folder Name="gazebo_interface">
+                    <Folder Name="include">
+                        <Folder Name="gazebo_interface">
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_interface/include/gazebo_interface/GazeboInterface.h"/>
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_interface/include/gazebo_interface/JointController.h"/>
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_interface/include/gazebo_interface/RobotController.h"/>
+                        </Folder>
+                    </Folder>
+                    <Folder Name="src">
+                        <Folder Name="gazebo_interface">
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_interface/src/gazebo_interface/GazeboInterface.cpp"/>
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_interface/src/gazebo_interface/JointController.cpp"/>
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_interface/src/gazebo_interface/RobotController.cpp"/>
+                        </Folder>
+                        <F N="src/deprecated_nasa_r2_simulator/gazebo_interface/src/joint PID tuning.txt"/>
+                    </Folder>
+                    <F N="src/deprecated_nasa_r2_simulator/gazebo_interface/CMakeLists.txt"/>
+                </Folder>
+                <Folder Name="gazebo_taskboard">
+                    <Folder Name="include">
+                        <Folder Name="gazebo_taskboard">
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/include/gazebo_taskboard/GazeboTaskboard.h"/>
+                        </Folder>
+                    </Folder>
+                    <Folder Name="src">
+                        <Folder Name="gazebo_taskboard">
+                            <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/src/gazebo_taskboard/GazeboTaskboard.cpp"/>
+                        </Folder>
+                    </Folder>
+                    <Folder Name="test">
+                        <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/test/helper.py"/>
+                        <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/test/test_numpad.py"/>
+                        <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/test/test_power_cover.py"/>
+                        <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/test/test_power_switch.py"/>
+                        <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/test/test_rocker_switch_a01.py"/>
+                        <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/test/test_toggle_a03_a05.py"/>
+                        <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/test/test_toggle_a04.py"/>
+                    </Folder>
+                    <F N="src/deprecated_nasa_r2_simulator/gazebo_taskboard/CMakeLists.txt"/>
+                </Folder>
+                <Folder Name="nasa_r2_simulator">
+                    <F N="src/deprecated_nasa_r2_simulator/nasa_r2_simulator/CMakeLists.txt"/>
+                </Folder>
+                <Folder Name="r2_controllers_ros">
+                    <Folder Name="include">
+                        <Folder Name="r2_controllers_ros">
+                            <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/include/r2_controllers_ros/R2RosArbiter.hpp"/>
+                            <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/include/r2_controllers_ros/R2RosTrajectoryManager.hpp"/>
+                            <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/include/r2_controllers_ros/R2RosTreeFk.hpp"/>
+                            <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/include/r2_controllers_ros/R2RosTreeId.hpp"/>
+                        </Folder>
+                    </Folder>
+                    <Folder Name="src">
+                        <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/src/r2_controller_node.cpp"/>
+                        <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/src/R2RosArbiter.cpp"/>
+                        <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/src/R2RosTrajectoryManager.cpp"/>
+                        <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/src/R2RosTreeFk.cpp"/>
+                        <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/src/R2RosTreeId.cpp"/>
+                    </Folder>
+                    <F N="src/deprecated_nasa_r2_simulator/r2_controllers_ros/CMakeLists.txt"/>
+                </Folder>
+                <Folder Name="r2_gazebo">
+                    <Folder Name="config">
+                        <F N="src/deprecated_nasa_r2_simulator/r2_gazebo/config/mass.txt"/>
+                        <F N="src/deprecated_nasa_r2_simulator/r2_gazebo/config/mass_conversion.py"/>
+                    </Folder>
+                    <F N="src/deprecated_nasa_r2_simulator/r2_gazebo/CMakeLists.txt"/>
+                    <F N="src/deprecated_nasa_r2_simulator/r2_gazebo/generateXml.sh"/>
+                    <F N="src/deprecated_nasa_r2_simulator/r2_gazebo/setup.sh"/>
+                </Folder>
+            </Folder>
+            <F N="src/CMakeLists.txt"/>
+        </Folder>
+    </Files>
+</Project>
