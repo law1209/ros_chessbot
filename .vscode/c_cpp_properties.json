@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/roc/ros_chessbot/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/roc/ros_chessbot/src/deprecated_nasa_r2_simulator/gazebo_gripper/include/**",
+        "/home/roc/ros_chessbot/src/deprecated_nasa_r2_simulator/gazebo_interface/include/**",
+        "/home/roc/ros_chessbot/src/deprecated_nasa_r2_simulator/gazebo_taskboard/include/**",
+        "/home/roc/ros_chessbot/src/deprecated_nasa_r2_common/nasa_r2_common_msgs/include/**",
+        "/home/roc/ros_chessbot/src/deprecated_nasa_r2_simulator/r2_controllers_ros/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
