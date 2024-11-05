@@ -1,0 +1,8 @@
+prefix=/home/roc/ros_chessbot/install
+
+Name: chessbot
+Description: Description of chessbot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

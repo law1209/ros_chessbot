@@ -1,0 +1,8 @@
+prefix=/home/roc/ros_chessbot/install
+
+Name: gazebo_gripper
+Description: Description of gazebo_gripper
+Version: 0.5.3
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 
