@@ -4,6 +4,8 @@
 			xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
 			xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
 
+<!-- This file contains the Gazebo revision to sensors-->
+
  <xacro:include filename="$(find r2_gazebo)/urdf/sensors/asus.gazebo.xacro" />
  <xacro:include filename="$(find r2_gazebo)/urdf/sensors/camera.gazebo.xacro" />
 

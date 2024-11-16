@@ -1,4 +1,9 @@
 <?xml version="1.0"?>
+
+<!-- This file contains the Gazebo revision to links and joints-->
+<!-- For links, add selfCollide, static, turnGravityOff-->
+<!-- For joints, add stopKd and stopKp (no add means no change)--> 
+
 <robot>
 
   <macro name="gazebo_link" params="name gravityOff static collide">

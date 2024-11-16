@@ -3,6 +3,8 @@
 			xmlns:interface="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface"
 			xmlns:sensor="http://playerstage.sourceforge.net/gazebo/xmlschema/#sensor"
 			xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface">
+
+  <!-- This file contains the Gazebo pludgins-->
   <gazebo>
     <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
     <robotNamespace>r2</robotNamespace>

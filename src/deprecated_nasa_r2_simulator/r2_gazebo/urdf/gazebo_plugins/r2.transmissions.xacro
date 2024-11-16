@@ -16,9 +16,10 @@
      </transmission>
   </macro>
 
+
+
   <!-- r2_arm_transmission xacro -->
   <macro name="r2_arm_trans" params="side">
-
      <r2_trans part="${side}" joint="0" reduction="100" tc="0.01"/>
      <r2_trans part="${side}" joint="1" reduction="100" tc="0.01"/>
      <r2_trans part="${side}" joint="2" reduction="100" tc="0.01"/>
@@ -49,16 +50,21 @@
      <r2_trans part="${side}/hand/little" joint="0" reduction="100" tc="0.01"/>
      <r2_trans part="${side}/hand/little" joint="1" reduction="100" tc="0.01"/>
      <r2_trans part="${side}/hand/little" joint="2" reduction="100" tc="0.01"/>
-
   </macro>
 
+
+
+
   <r2_trans part="${robot_name}waist" joint="0" reduction="100" tc="0.01"/>
+  <r2_trans part="${robot_name}neck" joint="0" reduction="100" tc="0.01"/>
+  <r2_trans part="${robot_name}neck" joint="1" reduction="100" tc="0.01"/>
+  <r2_trans part="${robot_name}neck" joint="2" reduction="100" tc="0.01"/>
+]
+
 
   <r2_arm_trans side="${robot_name}left_arm"/>
   <r2_arm_trans side="${robot_name}right_arm"/>
 
-  <r2_trans part="${robot_name}neck" joint="0" reduction="100" tc="0.01"/>
-  <r2_trans part="${robot_name}neck" joint="1" reduction="100" tc="0.01"/>
-  <r2_trans part="${robot_name}neck" joint="2" reduction="100" tc="0.01"/>
+
 
 </robot>
